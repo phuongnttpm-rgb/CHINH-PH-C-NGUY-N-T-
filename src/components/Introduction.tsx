@@ -68,7 +68,7 @@ export const Introduction: React.FC<IntroductionProps> = ({ onStart, onWatchVide
           <AtomicBot
             stage={1}
             mood="talking"
-            speechBubble="CHÀO CÁC PHI HÀNH GIA TRẺ! CÔ LÀ NGỌC PHƯỢNG . HÃY SẴN SÀNG CHINH PHỤC TRI THỨC CÙNG CÔ NHÉ"
+            speechBubble="CHÀO CÁC PHI HÀNH GIA TRẺ! CÔ LÀ NGỌC PHƯỢNG. HÃY SẴN SÀNG CHINH PHỤC TRI THỨC CÙNG CÔ NHÉ!"
             className="w-full max-w-[360px] sm:max-w-[420px]"
           />
         </div>

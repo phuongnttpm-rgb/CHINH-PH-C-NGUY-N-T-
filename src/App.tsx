@@ -221,61 +221,20 @@ export default function App() {
       </main>
 
       {/* FLOATING ACTION TOOL: ATOMIC CLOUD SIMULATOR MODAL TRIGGER */}
-      {activeStage !== "leaderboard" && (
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
-          {/* Button 1: Live Video Lecture - Thành Phần Nguyên Tử */}
+      {activeStage !== "lobby" && activeStage !== "leaderboard" && (
+        <div className="fixed bottom-6 right-6 z-50">
           <button
             type="button"
-            id="floating-video-trigger"
+            id="floating-model-trigger"
             onClick={() => {
               soundEngine.playTing();
-              setCurrentVideoUrl("https://www.youtube.com/embed/tu0X2mB4bs0?autoplay=1");
-              setCurrentVideoTitle("Video Bài Giảng: Thành Phần Nguyên Tử");
-              setIsVideoOpen(true);
+              setIsModelOpen(true);
             }}
-            className="flex items-center gap-2 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-slate-950 font-extrabold px-3.5 py-2.5 rounded-xl text-xs md:text-sm shadow-xl shadow-amber-500/10 hover:scale-105 active:scale-95 transition-all cursor-pointer group"
+            className="flex items-center gap-2 bg-gradient-to-r from-indigo-400 via-violet-500 to-purple-500 text-white font-extrabold px-3.5 py-2.5 rounded-xl text-xs md:text-sm shadow-xl shadow-violet-500/25 hover:scale-105 active:scale-95 transition-all cursor-pointer group"
           >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
-            </span>
-            <span className="tracking-tight uppercase">Thành Phần Nguyên Tử 🎬</span>
+            <span className="text-sm">⚛</span>
+            <span className="tracking-tight uppercase">Đám mây e⁻</span>
           </button>
-
-          {/* Button 2: Live Video Lecture - Lớp Vỏ Electron */}
-          <button
-            type="button"
-            id="floating-video-shell-trigger"
-            onClick={() => {
-              soundEngine.playTing();
-              setCurrentVideoUrl("https://www.youtube.com/embed/J8QV6g9YXuc?autoplay=1");
-              setCurrentVideoTitle("Video Bài Giảng: Lớp Vỏ Electron");
-              setIsVideoOpen(true);
-            }}
-            className="flex items-center gap-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-sky-500 text-slate-950 font-extrabold px-3.5 py-2.5 rounded-xl text-xs md:text-sm shadow-xl shadow-cyan-500/10 hover:scale-105 active:scale-95 transition-all cursor-pointer group"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75 text-cyan-400"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
-            </span>
-            <span className="tracking-tight uppercase">Lớp Vỏ Electron ⚡</span>
-          </button>
-
-          {/* Button 3: Atomic Cloud model (only active during actual gaming stages) */}
-          {activeStage !== "lobby" && (
-            <button
-              type="button"
-              id="floating-model-trigger"
-              onClick={() => {
-                soundEngine.playTing();
-                setIsModelOpen(true);
-              }}
-              className="flex items-center gap-2 bg-gradient-to-r from-indigo-400 via-violet-500 to-purple-500 text-white font-extrabold px-3.5 py-2.5 rounded-xl text-xs md:text-sm shadow-xl shadow-violet-500/25 hover:scale-105 active:scale-95 transition-all cursor-pointer group"
-            >
-              <span className="text-sm">⚛</span>
-              <span className="tracking-tight uppercase">Đám mây e⁻</span>
-            </button>
-          )}
         </div>
       )}
 

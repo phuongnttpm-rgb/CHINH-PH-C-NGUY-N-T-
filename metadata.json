@@ -1,0 +1,6 @@
+{
+  "name": "Hành Trình Nguyên Tử",
+  "description": "Chuỗi trò chơi liên hoàn học tập về cấu trúc nguyên tử và nguyên tố hóa học cho học sinh THPT.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
